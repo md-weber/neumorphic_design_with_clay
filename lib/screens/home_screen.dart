@@ -98,7 +98,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                               color: Colors.white),
                                         ),
                                         Text(
-                                          "193",
+                                          "240",
                                           style: GoogleFonts.play(
                                               color: Colors.white),
                                         )
@@ -114,7 +114,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                               color: Colors.white),
                                         ),
                                         Text(
-                                          "2730",
+                                          "3400",
                                           style: GoogleFonts.play(
                                               color: Colors.white),
                                         )
