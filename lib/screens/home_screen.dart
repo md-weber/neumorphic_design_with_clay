@@ -1,7 +1,9 @@
 import 'package:clay_containers/clay_containers.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:neumorphic_design_with_clay/widgets/player_widget.dart';
 import 'package:neumorphic_design_with_clay/widgets/social_media_widget.dart';
+import 'package:neumorphic_design_with_clay/widgets/statistics_widget.dart';
 import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -68,66 +70,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         ),
                       ),
                     ),
-                    Padding(
-                      padding: const EdgeInsets.symmetric(vertical: 30),
-                      child: ClayContainer(
-                        color: baseColor,
-                        child: Container(
-                          padding: const EdgeInsets.all(10),
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.stretch,
-                            children: <Widget>[
-                              Text(
-                                "Statistics: ",
-                                style: GoogleFonts.play(
-                                  color: Colors.white,
-                                  fontSize: 36.0,
-                                ),
-                              ),
-                              Padding(
-                                padding: const EdgeInsets.all(8.0),
-                                child: Column(
-                                  children: <Widget>[
-                                    Row(
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.spaceBetween,
-                                      children: <Widget>[
-                                        Text(
-                                          "Subscriber: ",
-                                          style: GoogleFonts.play(
-                                              color: Colors.white),
-                                        ),
-                                        Text(
-                                          "240",
-                                          style: GoogleFonts.play(
-                                              color: Colors.white),
-                                        )
-                                      ],
-                                    ),
-                                    Row(
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.spaceBetween,
-                                      children: <Widget>[
-                                        Text(
-                                          "Views: ",
-                                          style: GoogleFonts.play(
-                                              color: Colors.white),
-                                        ),
-                                        Text(
-                                          "3400",
-                                          style: GoogleFonts.play(
-                                              color: Colors.white),
-                                        )
-                                      ],
-                                    )
-                                  ],
-                                ),
-                              )
-                            ],
-                          ),
-                        ),
-                      ),
-                    ),
+                    StatisticsWidget(),
                     SocialMediaWidget(
                       baseColor: baseColor,
                     ),
@@ -136,84 +79,11 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
             ),
           ),
-          Container(
-            padding: EdgeInsets.all(8.0),
-            decoration: BoxDecoration(
-              color: navColor,
-            ),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: <Widget>[
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: ClayContainer(
-                    color: navColor,
-                    child: Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Icon(
-                        Icons.skip_previous,
-                        size: 54,
-                        color: Color(0xFF7B7B7B),
-                      ),
-                    ),
-                  ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: ClayContainer(
-                    color: navColor,
-                    child: GestureDetector(
-                      onTap: () {
-                        setState(() {
-                          _controller.play();
-                        });
-                      },
-                      child: Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: ClayContainer(
-                          color: navColor,
-                          borderRadius: 30.0,
-                          child: Icon(
-                            Icons.play_arrow,
-                            size: 54,
-                            color: Color(0xFFFF0000),
-                          ),
-                        ),
-                      ),
-                    ),
-                  ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.all(16.0),
-                  child: ClayContainer(
-                    color: navColor,
-                    child: Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Icon(
-                        Icons.fast_forward,
-                        size: 54,
-                        color: Color(0xFF7B7B7B),
-                      ),
-                    ),
-                  ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: ClayContainer(
-                    color: navColor,
-                    child: Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Icon(
-                        Icons.skip_next,
-                        size: 54,
-                        color: Color(0xFF7B7B7B),
-                      ),
-                    ),
-                  ),
-                )
-              ],
-            ),
-          ),
+          PlayerWidget(onTap: () {
+            setState(() {
+              _controller.play();
+            });
+          })
         ],
       ),
     );
