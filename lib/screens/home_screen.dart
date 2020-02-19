@@ -1,10 +1,8 @@
 import 'package:clay_containers/clay_containers.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_feather_icons/flutter_feather_icons.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:neumorphic_design_with_clay/widgets/button_row_widget.dart';
 import 'package:neumorphic_design_with_clay/widgets/statistics_widget.dart';
-import 'package:social_media_buttons/social_media_button.dart';
 import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 
 class HomeScreen extends StatefulWidget {
