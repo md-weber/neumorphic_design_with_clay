@@ -84,50 +84,6 @@ class _HomeScreenState extends State<HomeScreen> {
                   SizedBox(
                     height: 20.0,
                   ),
-                  ClayContainer(
-                    color: baseColor,
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: <Widget>[
-                        Padding(
-                          padding: const EdgeInsets.all(24.0),
-                          child: ClayContainer(
-                            child: SocialMediaButton.twitter(
-                              iconData: FeatherIcons.twitter,
-                              color: Colors.blue,
-                              url: "https://twitter.com/max_myracle",
-                            ),
-                            borderRadius: 30,
-                            color: baseColor,
-                          ),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.all(24.0),
-                          child: ClayContainer(
-                            child: SocialMediaButton.youtube(
-                              iconData: FeatherIcons.youtube,
-                              color: Colors.red,
-                              url:
-                                  "https://www.youtube.com/channel/UCgUnLn1FpuHHmO66vn4o1NA",
-                            ),
-                            borderRadius: 30,
-                            color: baseColor,
-                          ),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.all(24.0),
-                          child: ClayContainer(
-                            child: SocialMediaButton.medium(
-                              color: Colors.blue,
-                              url: "https://twitter.com/max_myracle",
-                            ),
-                            borderRadius: 30,
-                            color: baseColor,
-                          ),
-                        )
-                      ],
-                    ),
-                  )
                 ],
               ),
             ),
